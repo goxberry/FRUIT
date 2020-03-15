@@ -414,6 +414,173 @@ contains
   end subroutine test_assert_equals_2d_complex
 
 
+ subroutine test_assert_equals_3d
+    character(len = MSG_LEN) :: line_read
+    character(len = MSG_LEN) :: msgs(10)
+    integer :: failed_count
+    integer :: total_count
+    logical :: var1(4, 5, 6)
+    logical :: var2(4, 5, 6)
+    logical :: var3(4, 5, 6)
+    integer :: var1i(4, 5, 6)
+    integer :: var2i(4, 5, 6)
+    integer :: var3i(4, 5, 6)
+
+    var1(:, :, :) = .true.
+    var1(2, 3, 4) = .false.
+
+    var2(:, :, :) = var1(:, :, :)
+    var3(:, :, :) = var1(:, :, :)
+    var3(2, 2, 2) = .false.
+
+    var1i(:, :, :) = 123
+    var1i(1, 2, 3) = 3
+    var1i(2, 4, 6) = 6
+    var2i(:, :, :) = var1i(:, :, :)
+    var3i(:, :, :) = var1i(:, :, :)
+    var3i(3, 3, 3) = 4321
+
+    call override_stdout(20, STDOUTNAME)
+      call stash_test_suite
+        call assert_equals(var1, var2, 4, 5, 6, "3d logical A")
+        call assert_equals(var1, var3, 4, 5, 6, "3d logical B")
+        call assert_not_equals(var1, var2, 4, 5, 6, "3d logical, neq, A")
+        call assert_not_equals(var1, var3, 4, 5, 6, "3d logical, neq, B")
+
+        call assert_equals(var1i, var2i, 4, 5, 6, "3d integer A")
+        call assert_equals(var1i, var3i, 4, 5, 6, "3d integer B")
+        call assert_not_equals(var1i, var2i, 4, 5, 6, "3d integer, neq, A")
+        call assert_not_equals(var1i, var3i, 4, 5, 6, "3d integer, neq, B")
+
+        call get_failed_count(failed_count)
+        call get_total_count( total_count )
+        call get_messages(msgs)
+      call restore_test_suite
+    call end_override_stdout
+
+    call assert_equals( 4, failed_count, "Number of failed assertions")
+    call assert_equals( 8, total_count, "Number of total assertions")
+
+    call assert_string_has_string_tmp(msgs(1), "3d logical B")
+    call assert_string_has_string_tmp(msgs(2), "3d logical, neq, A")
+    call assert_string_has_string_tmp(msgs(3), "3d integer B")
+    call assert_string_has_string_tmp(msgs(4), "3d integer, neq, A")
+
+    open (20, file = STDOUTNAME)
+      read (20, '(a)') line_read
+      call assert_equals(".FF." // ".FF.", line_read)
+    close(20)
+  end subroutine test_assert_equals_3d
+
+  subroutine test_assert_equals_3d_real
+    character(len = MSG_LEN) :: line_read
+    character(len = MSG_LEN) :: msgs(10)
+    integer :: failed_count
+    integer :: total_count
+    real    :: var1(4, 5, 6)
+    real    :: var2(4, 5, 6)
+    real    :: var3(4, 5, 6)
+    double precision :: var1d(4, 5, 6)
+    double precision :: var2d(4, 5, 6)
+    double precision :: var3d(4, 5, 6)
+
+    var1(:, :, :) = 2.0
+    var1(2, 3, 4) = 4.0
+
+    var2(:, :, :) = var1(:, :, :)
+    var3(:, :, :) = var1(:, :, :)
+    var3(2, 2, 2) = 2.01
+
+    var1d(:, :, :) = 2.d0
+    var1d(1, 2, 3) = 3.d0
+    var1d(2, 4, 6) = 6.d0
+    var2d(:, :, :) = var1d(:, :, :)
+    var3d(:, :, :) = var1d(:, :, :)
+    var3d(3, 3, 3) = 2.01d0
+
+    call override_stdout(20, STDOUTNAME)
+      call stash_test_suite
+        call assert_equals(var1, var2, 4, 5, 6, "3d real A")
+        call assert_equals(var1, var3, 4, 5, 6, "3d real B")
+        call assert_equals(var1, var3, 4, 5, 6, 0.1, "3d real C")
+        call assert_equals(var1, var3, 4, 5, 6, 0.001, "3d real D")
+        call assert_not_equals(var1, var2, 4, 5, 6, "3d real, neq, A")
+        call assert_not_equals(var1, var3, 4, 5, 6, "3d real, neq, B")
+
+        call assert_equals(var1d, var2d, 4, 5, 6, "3d double A")
+        call assert_equals(var1d, var3d, 4, 5, 6, "3d double B")
+        call assert_equals(var1d, var3d, 4, 5, 6, 0.1d0,  "3d double C")
+        call assert_equals(var1d, var3d, 4, 5, 6, 0.001d0, "3d double D")
+        call assert_not_equals(var1d, var2d, 4, 5, 6, "3d double, neq, A")
+        call assert_not_equals(var1d, var3d, 4, 5, 6, "3d double, neq, B")
+
+        call get_failed_count(failed_count)
+        call get_total_count( total_count )
+        call get_messages(msgs)
+      call restore_test_suite
+    call end_override_stdout
+
+    call assert_equals( 6, failed_count, "Number of failed assertions")
+    call assert_equals(12, total_count,  "Number of total assertions")
+
+    call assert_string_has_string_tmp(msgs(1), "3d real B")
+    call assert_string_has_string_tmp(msgs(2), "3d real D")
+    call assert_string_has_string_tmp(msgs(3), "3d real, neq, A")
+    call assert_string_has_string_tmp(msgs(4), "3d double B")
+    call assert_string_has_string_tmp(msgs(5), "3d double D")
+    call assert_string_has_string_tmp(msgs(6), "3d double, neq, A")
+
+    open (20, file = STDOUTNAME)
+      read (20, '(a)') line_read
+      call assert_equals(".F.FF." // ".F.FF.", line_read)
+    close(20)
+  end subroutine test_assert_equals_3d_real
+
+  subroutine test_assert_equals_3d_complex
+    character(len = MSG_LEN) :: line_read
+    character(len = MSG_LEN) :: msgs(10)
+    integer :: failed_count
+    integer :: total_count
+    complex(kind = kind(1.d0)) :: var1(4, 5, 6)
+    complex(kind = kind(1.d0)) :: var2(4, 5, 6)
+    complex(kind = kind(1.d0)) :: var3(4, 5, 6)
+
+    var1(:, :, :) = (2.d0, -2.d0)
+    var1(2, 3, 4) = (4.d0,  7.d0)
+
+    var2(:, :, :) = var1(:, :, :)
+    var3(:, :, :) = var1(:, :, :)
+    var3(2, 2, 2) = (2.d0, -2.01d0)
+
+    call override_stdout(20, STDOUTNAME)
+      call stash_test_suite
+        call assert_equals(var1, var2, 4, 5, 6, "3d complex A")
+        call assert_equals(var1, var3, 4, 5, 6, "3d complex B")
+        call assert_equals(var1, var3, 4, 5, 6, 0.1d0, "3d complex C")
+        call assert_equals(var1, var3, 4, 5, 6, 0.001d0, "3d complex D")
+        call assert_not_equals(var1, var2, 4, 5, 6, "3d complex, neq, A")
+        call assert_not_equals(var1, var3, 4, 5, 6, "3d complex, neq, B")
+
+        call get_failed_count(failed_count)
+        call get_total_count( total_count )
+        call get_messages(msgs)
+      call restore_test_suite
+    call end_override_stdout
+
+    call assert_equals( 3, failed_count, "Number of failed assertions")
+    call assert_equals( 6, total_count,  "Number of total assertions")
+
+    call assert_string_has_string_tmp(msgs(1), "3d complex B")
+    call assert_string_has_string_tmp(msgs(2), "3d complex D")
+    call assert_string_has_string_tmp(msgs(3), "3d complex, neq, A")
+
+    open (20, file = STDOUTNAME)
+      read (20, '(a)') line_read
+      call assert_equals(".F.FF.", line_read)
+    close(20)
+  end subroutine test_assert_equals_3d_complex
+
+
   subroutine assert_string_has_string_tmp(str1, str2)
     character (len = *), intent(in) :: str1, str2
     logical :: has_string

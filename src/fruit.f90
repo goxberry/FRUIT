@@ -361,30 +361,39 @@ module fruit
     module procedure assert_eq_logical_
     module procedure assert_eq_1d_logical_
     module procedure assert_eq_2d_logical_
+    module procedure assert_eq_3d_logical_
     module procedure assert_eq_string_
     module procedure assert_eq_1d_string_
     module procedure assert_eq_2d_string_
+    module procedure assert_eq_3d_string_
     module procedure assert_eq_int_
     module procedure assert_eq_1d_int_
     module procedure assert_eq_2d_int_
+    module procedure assert_eq_3d_int_
     module procedure assert_eq_real_
     module procedure assert_eq_real_in_range_
     module procedure assert_eq_1d_real_
     module procedure assert_eq_1d_real_in_range_
     module procedure assert_eq_2d_real_
     module procedure assert_eq_2d_real_in_range_
+    module procedure assert_eq_3d_real_
+    module procedure assert_eq_3d_real_in_range_
     module procedure assert_eq_double_
     module procedure assert_eq_double_in_range_
     module procedure assert_eq_1d_double_
     module procedure assert_eq_1d_double_in_range_
     module procedure assert_eq_2d_double_
     module procedure assert_eq_2d_double_in_range_
+    module procedure assert_eq_3d_double_
+    module procedure assert_eq_3d_double_in_range_
     module procedure assert_eq_complex_
     module procedure assert_eq_complex_in_range_
     module procedure assert_eq_1d_complex_
     module procedure assert_eq_1d_complex_in_range_
     module procedure assert_eq_2d_complex_
     module procedure assert_eq_2d_complex_in_range_
+    module procedure assert_eq_3d_complex_
+    module procedure assert_eq_3d_complex_in_range_
   !====== end of generated inteface ======
   end interface
 
@@ -393,30 +402,39 @@ module fruit
     module procedure assert_eq_logical_
     module procedure assert_eq_1d_logical_
     module procedure assert_eq_2d_logical_
+    module procedure assert_eq_3d_logical_
     module procedure assert_eq_string_
     module procedure assert_eq_1d_string_
     module procedure assert_eq_2d_string_
+    module procedure assert_eq_3d_string_
     module procedure assert_eq_int_
     module procedure assert_eq_1d_int_
     module procedure assert_eq_2d_int_
+    module procedure assert_eq_3d_int_
     module procedure assert_eq_real_
     module procedure assert_eq_real_in_range_
     module procedure assert_eq_1d_real_
     module procedure assert_eq_1d_real_in_range_
     module procedure assert_eq_2d_real_
     module procedure assert_eq_2d_real_in_range_
+    module procedure assert_eq_3d_real_
+    module procedure assert_eq_3d_real_in_range_
     module procedure assert_eq_double_
     module procedure assert_eq_double_in_range_
     module procedure assert_eq_1d_double_
     module procedure assert_eq_1d_double_in_range_
     module procedure assert_eq_2d_double_
     module procedure assert_eq_2d_double_in_range_
+    module procedure assert_eq_3d_double_
+    module procedure assert_eq_3d_double_in_range_
     module procedure assert_eq_complex_
     module procedure assert_eq_complex_in_range_
     module procedure assert_eq_1d_complex_
     module procedure assert_eq_1d_complex_in_range_
     module procedure assert_eq_2d_complex_
     module procedure assert_eq_2d_complex_in_range_
+    module procedure assert_eq_3d_complex_
+    module procedure assert_eq_3d_complex_in_range_
   !====== end of generated inteface ======
   end interface
 
@@ -425,30 +443,39 @@ module fruit
     module procedure assert_not_equals_logical_
     module procedure assert_not_equals_1d_logical_
     module procedure assert_not_equals_2d_logical_
+    module procedure assert_not_equals_3d_logical_
     module procedure assert_not_equals_string_
     module procedure assert_not_equals_1d_string_
     module procedure assert_not_equals_2d_string_
+    module procedure assert_not_equals_3d_string_
     module procedure assert_not_equals_int_
     module procedure assert_not_equals_1d_int_
     module procedure assert_not_equals_2d_int_
+    module procedure assert_not_equals_3d_int_
     module procedure assert_not_equals_real_
     module procedure assert_not_equals_real_in_range_
     module procedure assert_not_equals_1d_real_
     module procedure assert_not_equals_1d_real_in_range_
     module procedure assert_not_equals_2d_real_
     module procedure assert_not_equals_2d_real_in_range_
+    module procedure assert_not_equals_3d_real_
+    module procedure assert_not_equals_3d_real_in_range_
     module procedure assert_not_equals_double_
     module procedure assert_not_equals_double_in_range_
     module procedure assert_not_equals_1d_double_
     module procedure assert_not_equals_1d_double_in_range_
     module procedure assert_not_equals_2d_double_
     module procedure assert_not_equals_2d_double_in_range_
+    module procedure assert_not_equals_3d_double_
+    module procedure assert_not_equals_3d_double_in_range_
     module procedure assert_not_equals_complex_
     module procedure assert_not_equals_complex_in_range_
     module procedure assert_not_equals_1d_complex_
     module procedure assert_not_equals_1d_complex_in_range_
     module procedure assert_not_equals_2d_complex_
     module procedure assert_not_equals_2d_complex_in_range_
+    module procedure assert_not_equals_3d_complex_
+    module procedure assert_not_equals_3d_complex_in_range_
   !====== end of generated inteface ======
 
   end interface
@@ -458,30 +485,39 @@ module fruit
     module procedure assert_not_equals_logical_
     module procedure assert_not_equals_1d_logical_
     module procedure assert_not_equals_2d_logical_
+    module procedure assert_not_equals_3d_logical_
     module procedure assert_not_equals_string_
     module procedure assert_not_equals_1d_string_
     module procedure assert_not_equals_2d_string_
+    module procedure assert_not_equals_3d_string_
     module procedure assert_not_equals_int_
     module procedure assert_not_equals_1d_int_
     module procedure assert_not_equals_2d_int_
+    module procedure assert_not_equals_3d_int_
     module procedure assert_not_equals_real_
     module procedure assert_not_equals_real_in_range_
     module procedure assert_not_equals_1d_real_
     module procedure assert_not_equals_1d_real_in_range_
     module procedure assert_not_equals_2d_real_
     module procedure assert_not_equals_2d_real_in_range_
+    module procedure assert_not_equals_3d_real_
+    module procedure assert_not_equals_3d_real_in_range_
     module procedure assert_not_equals_double_
     module procedure assert_not_equals_double_in_range_
     module procedure assert_not_equals_1d_double_
     module procedure assert_not_equals_1d_double_in_range_
     module procedure assert_not_equals_2d_double_
     module procedure assert_not_equals_2d_double_in_range_
+    module procedure assert_not_equals_3d_double_
+    module procedure assert_not_equals_3d_double_in_range_
     module procedure assert_not_equals_complex_
     module procedure assert_not_equals_complex_in_range_
     module procedure assert_not_equals_1d_complex_
     module procedure assert_not_equals_1d_complex_in_range_
     module procedure assert_not_equals_2d_complex_
     module procedure assert_not_equals_2d_complex_in_range_
+    module procedure assert_not_equals_3d_complex_
+    module procedure assert_not_equals_3d_complex_in_range_
   !====== end of generated inteface ======
 
   end interface
@@ -1517,6 +1553,28 @@ contains
     call add_success
   end subroutine assert_eq_2d_logical_
 
+  !------ 3d_logical ------
+  subroutine assert_eq_3d_logical_(var1, var2, n, m, p, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    logical, intent (in) :: var1(n, m, p), var2(n, m, p)
+    
+    character(len = *), intent (in), optional :: message
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if (var1(i, j, k) .neqv. var2(i, j, k)) then
+          call failed_assert_action(&
+          & to_s(var1(i, j, k)), &
+          & to_s(var2(i, j, k)), '3d array has difference, ' // message, if_is = .true.)
+          return
+        endif
+        enddo
+      enddo
+    enddo
+    call add_success
+  end subroutine assert_eq_3d_logical_
+
   !------ 0d_string ------
   subroutine assert_eq_string_(var1, var2, message)
 
@@ -1572,6 +1630,28 @@ contains
     call add_success
   end subroutine assert_eq_2d_string_
 
+  !------ 3d_string ------
+  subroutine assert_eq_3d_string_(var1, var2, n, m, p, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    character (len = *), intent (in) :: var1(n, m, p), var2(n, m, p)
+    
+    character(len = *), intent (in), optional :: message
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if (trim(strip(var1(i, j, k))) /= trim(strip(var2(i, j, k)))) then
+          call failed_assert_action(&
+          & to_s(var1(i, j, k)), &
+          & to_s(var2(i, j, k)), '3d array has difference, ' // message, if_is = .true.)
+          return
+        endif
+        enddo
+      enddo
+    enddo
+    call add_success
+  end subroutine assert_eq_3d_string_
+
   !------ 0d_int ------
   subroutine assert_eq_int_(var1, var2, message)
 
@@ -1626,6 +1706,28 @@ contains
     enddo
     call add_success
   end subroutine assert_eq_2d_int_
+
+  !------ 3d_int ------
+  subroutine assert_eq_3d_int_(var1, var2, n, m, p, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    integer, intent (in) :: var1(n, m, p), var2(n, m, p)
+    
+    character(len = *), intent (in), optional :: message
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if (var1(i, j, k) /= var2(i, j, k)) then
+          call failed_assert_action(&
+          & to_s(var1(i, j, k)), &
+          & to_s(var2(i, j, k)), '3d array has difference, ' // message, if_is = .true.)
+          return
+        endif
+        enddo
+      enddo
+    enddo
+    call add_success
+  end subroutine assert_eq_3d_int_
 
   !------ 0d_real ------
   subroutine assert_eq_real_(var1, var2, message)
@@ -1737,6 +1839,50 @@ contains
     call add_success
   end subroutine assert_eq_2d_real_in_range_
 
+  !------ 3d_real ------
+  subroutine assert_eq_3d_real_(var1, var2, n, m, p, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    real, intent (in) :: var1(n, m, p), var2(n, m, p)
+    
+    character(len = *), intent (in), optional :: message
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if ((var1(i, j, k) < var2(i, j, k)) .or. (var1(i, j, k) > var2(i, j, k))) then
+          call failed_assert_action(&
+          & to_s(var1(i, j, k)), &
+          & to_s(var2(i, j, k)), '3d array has difference, ' // message, if_is = .true.)
+          return
+        endif
+        enddo
+      enddo
+    enddo
+    call add_success
+  end subroutine assert_eq_3d_real_
+
+  !------ 3d_real ------
+  subroutine assert_eq_3d_real_in_range_(var1, var2, n, m, p, delta, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    real, intent (in) :: var1(n, m, p), var2(n, m, p)
+    real, intent (in) :: delta
+    character(len = *), intent (in), optional :: message
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if (abs(var1(i, j, k) - var2(i, j, k)) > delta) then
+          call failed_assert_action(&
+          & to_s(var1(i, j, k)), &
+          & to_s(var2(i, j, k)), '3d array has difference, ' // message, if_is = .true.)
+          return
+        endif
+        enddo
+      enddo
+    enddo
+    call add_success
+  end subroutine assert_eq_3d_real_in_range_
+
   !------ 0d_double ------
   subroutine assert_eq_double_(var1, var2, message)
 
@@ -1846,6 +1992,50 @@ contains
     enddo
     call add_success
   end subroutine assert_eq_2d_double_in_range_
+
+  !------ 3d_double ------
+  subroutine assert_eq_3d_double_(var1, var2, n, m, p, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    double precision, intent (in) :: var1(n, m, p), var2(n, m, p)
+    
+    character(len = *), intent (in), optional :: message
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if ((var1(i, j, k) < var2(i, j, k)) .or. (var1(i, j, k) > var2(i, j, k))) then
+          call failed_assert_action(&
+          & to_s(var1(i, j, k)), &
+          & to_s(var2(i, j, k)), '3d array has difference, ' // message, if_is = .true.)
+          return
+        endif
+        enddo
+      enddo
+    enddo
+    call add_success
+  end subroutine assert_eq_3d_double_
+
+  !------ 3d_double ------
+  subroutine assert_eq_3d_double_in_range_(var1, var2, n, m, p, delta, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    double precision, intent (in) :: var1(n, m, p), var2(n, m, p)
+    double precision, intent (in) :: delta
+    character(len = *), intent (in), optional :: message
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if (abs(var1(i, j, k) - var2(i, j, k)) > delta) then
+          call failed_assert_action(&
+          & to_s(var1(i, j, k)), &
+          & to_s(var2(i, j, k)), '3d array has difference, ' // message, if_is = .true.)
+          return
+        endif
+        enddo
+      enddo
+    enddo
+    call add_success
+  end subroutine assert_eq_3d_double_in_range_
 
   !------ 0d_complex ------
   subroutine assert_eq_complex_(var1, var2, message)
@@ -1966,6 +2156,53 @@ contains
     call add_success
   end subroutine assert_eq_2d_complex_in_range_
 
+  !------ 3d_complex ------
+  subroutine assert_eq_3d_complex_(var1, var2, n, m, p, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    complex(kind=kind(1.0D0)), intent (in) :: var1(n, m, p), var2(n, m, p)
+    
+    character(len = *), intent (in), optional :: message
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if ((real (var1(i, j, k)) < real (var2(i, j, k))) .or. &
+&(real (var1(i, j, k)) > real (var2(i, j, k))) .or. &
+&(aimag(var1(i, j, k)) < aimag(var2(i, j, k))) .or. &
+&(aimag(var1(i, j, k)) > aimag(var2(i, j, k)))) then
+          call failed_assert_action(&
+          & to_s(var1(i, j, k)), &
+          & to_s(var2(i, j, k)), '3d array has difference, ' // message, if_is = .true.)
+          return
+        endif
+        enddo
+      enddo
+    enddo
+    call add_success
+  end subroutine assert_eq_3d_complex_
+
+  !------ 3d_complex ------
+  subroutine assert_eq_3d_complex_in_range_(var1, var2, n, m, p, delta, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    complex(kind=kind(1.0D0)), intent (in) :: var1(n, m, p), var2(n, m, p)
+    double precision, intent (in) :: delta
+    character(len = *), intent (in), optional :: message
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if (abs(var1(i, j, k) - var2(i, j, k)) > delta) then
+          call failed_assert_action(&
+          & to_s(var1(i, j, k)), &
+          & to_s(var2(i, j, k)), '3d array has difference, ' // message, if_is = .true.)
+          return
+        endif
+        enddo
+      enddo
+    enddo
+    call add_success
+  end subroutine assert_eq_3d_complex_in_range_
+
   !------ 0d_logical ------
   subroutine assert_not_equals_logical_(var1, var2, message)
 
@@ -2038,6 +2275,34 @@ contains
     endif
     call add_success
   end subroutine assert_not_equals_2d_logical_
+
+  !------ 3d_logical ------
+  subroutine assert_not_equals_3d_logical_(var1, var2, n, m, p, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    logical, intent (in) :: var1(n, m, p), var2(n, m, p)
+    
+    character(len = *), intent (in), optional :: message
+    logical :: same_so_far
+
+    same_so_far = .true.
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if (var1(i, j, k) .neqv. var2(i, j, k)) then
+          same_so_far = .false.
+        endif
+        enddo
+      enddo
+    enddo
+    if (same_so_far) then
+      call failed_assert_action(&
+      & to_s(var1(1, 1, 1)), &
+      & to_s(var2(1, 1, 1)), '3d array has no difference, ' // message, if_is = .false.)
+      return
+    endif
+    call add_success
+  end subroutine assert_not_equals_3d_logical_
 
   !------ 0d_string ------
   subroutine assert_not_equals_string_(var1, var2, message)
@@ -2112,6 +2377,34 @@ contains
     call add_success
   end subroutine assert_not_equals_2d_string_
 
+  !------ 3d_string ------
+  subroutine assert_not_equals_3d_string_(var1, var2, n, m, p, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    character (len = *), intent (in) :: var1(n, m, p), var2(n, m, p)
+    
+    character(len = *), intent (in), optional :: message
+    logical :: same_so_far
+
+    same_so_far = .true.
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if (trim(strip(var1(i, j, k))) /= trim(strip(var2(i, j, k)))) then
+          same_so_far = .false.
+        endif
+        enddo
+      enddo
+    enddo
+    if (same_so_far) then
+      call failed_assert_action(&
+      & to_s(var1(1, 1, 1)), &
+      & to_s(var2(1, 1, 1)), '3d array has no difference, ' // message, if_is = .false.)
+      return
+    endif
+    call add_success
+  end subroutine assert_not_equals_3d_string_
+
   !------ 0d_int ------
   subroutine assert_not_equals_int_(var1, var2, message)
 
@@ -2184,6 +2477,34 @@ contains
     endif
     call add_success
   end subroutine assert_not_equals_2d_int_
+
+  !------ 3d_int ------
+  subroutine assert_not_equals_3d_int_(var1, var2, n, m, p, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    integer, intent (in) :: var1(n, m, p), var2(n, m, p)
+    
+    character(len = *), intent (in), optional :: message
+    logical :: same_so_far
+
+    same_so_far = .true.
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if (var1(i, j, k) /= var2(i, j, k)) then
+          same_so_far = .false.
+        endif
+        enddo
+      enddo
+    enddo
+    if (same_so_far) then
+      call failed_assert_action(&
+      & to_s(var1(1, 1, 1)), &
+      & to_s(var2(1, 1, 1)), '3d array has no difference, ' // message, if_is = .false.)
+      return
+    endif
+    call add_success
+  end subroutine assert_not_equals_3d_int_
 
   !------ 0d_real ------
   subroutine assert_not_equals_real_(var1, var2, message)
@@ -2331,6 +2652,62 @@ contains
     call add_success
   end subroutine assert_not_equals_2d_real_in_range_
 
+  !------ 3d_real ------
+  subroutine assert_not_equals_3d_real_(var1, var2, n, m, p, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    real, intent (in) :: var1(n, m, p), var2(n, m, p)
+    
+    character(len = *), intent (in), optional :: message
+    logical :: same_so_far
+
+    same_so_far = .true.
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if ((var1(i, j, k) < var2(i, j, k)) .or. (var1(i, j, k) > var2(i, j, k))) then
+          same_so_far = .false.
+        endif
+        enddo
+      enddo
+    enddo
+    if (same_so_far) then
+      call failed_assert_action(&
+      & to_s(var1(1, 1, 1)), &
+      & to_s(var2(1, 1, 1)), '3d array has no difference, ' // message, if_is = .false.)
+      return
+    endif
+    call add_success
+  end subroutine assert_not_equals_3d_real_
+
+  !------ 3d_real ------
+  subroutine assert_not_equals_3d_real_in_range_(var1, var2, n, m, p, delta, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    real, intent (in) :: var1(n, m, p), var2(n, m, p)
+    real, intent (in) :: delta
+    character(len = *), intent (in), optional :: message
+    logical :: same_so_far
+
+    same_so_far = .true.
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if (abs(var1(i, j, k) - var2(i, j, k)) > delta) then
+          same_so_far = .false.
+        endif
+        enddo
+      enddo
+    enddo
+    if (same_so_far) then
+      call failed_assert_action(&
+      & to_s(var1(1, 1, 1)), &
+      & to_s(var2(1, 1, 1)), '3d array has no difference, ' // message, if_is = .false.)
+      return
+    endif
+    call add_success
+  end subroutine assert_not_equals_3d_real_in_range_
+
   !------ 0d_double ------
   subroutine assert_not_equals_double_(var1, var2, message)
 
@@ -2476,6 +2853,62 @@ contains
     endif
     call add_success
   end subroutine assert_not_equals_2d_double_in_range_
+
+  !------ 3d_double ------
+  subroutine assert_not_equals_3d_double_(var1, var2, n, m, p, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    double precision, intent (in) :: var1(n, m, p), var2(n, m, p)
+    
+    character(len = *), intent (in), optional :: message
+    logical :: same_so_far
+
+    same_so_far = .true.
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if ((var1(i, j, k) < var2(i, j, k)) .or. (var1(i, j, k) > var2(i, j, k))) then
+          same_so_far = .false.
+        endif
+        enddo
+      enddo
+    enddo
+    if (same_so_far) then
+      call failed_assert_action(&
+      & to_s(var1(1, 1, 1)), &
+      & to_s(var2(1, 1, 1)), '3d array has no difference, ' // message, if_is = .false.)
+      return
+    endif
+    call add_success
+  end subroutine assert_not_equals_3d_double_
+
+  !------ 3d_double ------
+  subroutine assert_not_equals_3d_double_in_range_(var1, var2, n, m, p, delta, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    double precision, intent (in) :: var1(n, m, p), var2(n, m, p)
+    double precision, intent (in) :: delta
+    character(len = *), intent (in), optional :: message
+    logical :: same_so_far
+
+    same_so_far = .true.
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if (abs(var1(i, j, k) - var2(i, j, k)) > delta) then
+          same_so_far = .false.
+        endif
+        enddo
+      enddo
+    enddo
+    if (same_so_far) then
+      call failed_assert_action(&
+      & to_s(var1(1, 1, 1)), &
+      & to_s(var2(1, 1, 1)), '3d array has no difference, ' // message, if_is = .false.)
+      return
+    endif
+    call add_success
+  end subroutine assert_not_equals_3d_double_in_range_
 
   !------ 0d_complex ------
   subroutine assert_not_equals_complex_(var1, var2, message)
@@ -2631,6 +3064,65 @@ contains
     endif
     call add_success
   end subroutine assert_not_equals_2d_complex_in_range_
+
+  !------ 3d_complex ------
+  subroutine assert_not_equals_3d_complex_(var1, var2, n, m, p, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    complex(kind=kind(1.0D0)), intent (in) :: var1(n, m, p), var2(n, m, p)
+    
+    character(len = *), intent (in), optional :: message
+    logical :: same_so_far
+
+    same_so_far = .true.
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if ((real (var1(i, j, k)) < real (var2(i, j, k))) .or. &
+&(real (var1(i, j, k)) > real (var2(i, j, k))) .or. &
+&(aimag(var1(i, j, k)) < aimag(var2(i, j, k))) .or. &
+&(aimag(var1(i, j, k)) > aimag(var2(i, j, k)))) then
+          same_so_far = .false.
+        endif
+        enddo
+      enddo
+    enddo
+    if (same_so_far) then
+      call failed_assert_action(&
+      & to_s(var1(1, 1, 1)), &
+      & to_s(var2(1, 1, 1)), '3d array has no difference, ' // message, if_is = .false.)
+      return
+    endif
+    call add_success
+  end subroutine assert_not_equals_3d_complex_
+
+  !------ 3d_complex ------
+  subroutine assert_not_equals_3d_complex_in_range_(var1, var2, n, m, p, delta, message)
+    integer, intent (in) :: n, m, p
+    integer              :: i, j, k
+    complex(kind=kind(1.0D0)), intent (in) :: var1(n, m, p), var2(n, m, p)
+    double precision, intent (in) :: delta
+    character(len = *), intent (in), optional :: message
+    logical :: same_so_far
+
+    same_so_far = .true.
+    do k = 1, p
+      do j = 1, m
+        do i = 1, n
+        if (abs(var1(i, j, k) - var2(i, j, k)) > delta) then
+          same_so_far = .false.
+        endif
+        enddo
+      enddo
+    enddo
+    if (same_so_far) then
+      call failed_assert_action(&
+      & to_s(var1(1, 1, 1)), &
+      & to_s(var2(1, 1, 1)), '3d array has no difference, ' // message, if_is = .false.)
+      return
+    endif
+    call add_success
+  end subroutine assert_not_equals_3d_complex_in_range_
 
   !====== end of generated code ======
 
