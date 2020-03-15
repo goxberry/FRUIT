@@ -147,8 +147,9 @@ Follow the directions in the `README`, except:
 Auxiliary scripts for making and testing namespace changes:
 -----------------------------------------------------------
 
-- `./rake_wrapper.sh` is an idempotent Bash script that automates all
-  of the steps in the modified installation described above
+- `./development_rake_wrapper.sh` is an idempotent Bash script that
+  automates all of the steps in the modified installation described
+  above
 - `./git_restore_everything.sh` is an idempotent Bash script that restores
   the state of all Ruby and Fortran source files in the event that
   unstaged changes need to be reverted
